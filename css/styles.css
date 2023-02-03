@@ -450,18 +450,17 @@ img {
     padding-bottom: 120px;
 }
 .menu-li {
-    width: 360px;
-    height: 420px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    cursor: pointer;
+    width: calc((100% - 48px) / 3);
+    /* width: 360px;
+    height: 420px; */
+    /* box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); */
 }
-.menu-li:hover,
+/* .menu-li:hover,
 .menu-li:focus {
     border-color:  #F4F4FD;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-.menu-li:is(:hover, :focus) .includ {
+} */
+.menu-link:is(:hover, :focus) .includ {
     transform: translateY(0);
 }
 .menu-portfolio {
@@ -470,8 +469,6 @@ img {
     gap: 48px 24px;
 }
 .menu-content {
-    border: 1px solid #E7E9FC;
-    border: none;
     padding: 32px 0px 32px 16px;
 }
 .top-wrap {
@@ -490,7 +487,21 @@ img {
     padding: 40px 32px 164px 32px;
     overflow: auto;
 }
-
+.menu-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    transition: border-color 250ms linear, box-shadow 250ms linear;
+}
+.menu-link:hover,
+.menu-link:focus {
+    border-color:  #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.menu-text {
+    color: var(--slate)
+}
 /* Modal window */
 
 .backdrop {
